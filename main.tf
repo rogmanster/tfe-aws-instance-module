@@ -11,7 +11,6 @@ data "terraform_remote_state" "aws_vpc_prod" {
   }
 }
 
-// Workspace Data
 data "terraform_remote_state" "aws_security_group" {
   backend = "remote"
 
@@ -27,7 +26,7 @@ module "aws_instance" {
   source  = "app.terraform.io/rogercorp/aws-instance-PMR/tfe"
   version = "1.0.3"
 
-  name   = "rchao"
+  name   = "rchao-test"
   instance_count = "3"
   instance_type = "t2.micro"
   owner = "rchao"
