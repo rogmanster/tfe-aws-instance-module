@@ -27,7 +27,7 @@ module "aws_instance" {
   version = "1.0.3"
 
   name   = "rchao-test"
-  instance_count = "3"
+  instance_count = "1"
   instance_type = "t2.micro"
   owner = "rchao"
   ttl = "3"
