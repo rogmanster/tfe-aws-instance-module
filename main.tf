@@ -24,7 +24,7 @@ data "terraform_remote_state" "aws_security_group" {
 
 module "aws_instance" {
   source  = "app.terraform.io/rogercorp/aws-instance-PMR/tfe"
-  version = "1.0.3"
+  version = "1.0.5"
 
   name   = "rchao-test"
   instance_count = "1"
