@@ -24,12 +24,12 @@ data "terraform_remote_state" "aws_security_group" {
 
 module "aws_instance" {
   source  = "app.terraform.io/rogercorp/aws-instance-PMR/tfe"
-  version = "1.0.5"
+  version = "1.2.0"
 
   name   = "rchao-test"
   instance_count = "1"
   instance_type = "t2.micro"
-  owner = "rchao"
+  env = "module"
   ttl = "3"
 
   vpc_security_group_ids  = [data.terraform_remote_state.aws_security_group.outputs.security_group_id]
