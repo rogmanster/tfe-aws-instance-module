@@ -31,7 +31,7 @@ data "aws_key_pair" "example" {
 
 module "aws_instance" {
   source  = "app.terraform.io/rogercorp/aws-instance-PMR/tfe"
-  version = "1.2.1"
+  version = "1.2.4"
 
   name   = "rchao-test"
   instance_count = "1"
@@ -42,4 +42,5 @@ module "aws_instance" {
 
   security_group_id       = [data.terraform_remote_state.aws_security_group.outputs.security_group_id]
   subnet_id               = data.terraform_remote_state.aws_vpc_prod.outputs.public_subnets[0]
+  description             = "v.0.0.2"
 }
