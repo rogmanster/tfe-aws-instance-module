@@ -1,27 +1,4 @@
 
-// Workspace Data
-data "terraform_remote_state" "aws_vpc_prod" {
-  backend = "remote"
-
-  config = {
-    organization = "rogercorp"
-    workspaces = {
-      name = "aws-vpc-prod"
-    }
-  }
-}
-
-data "terraform_remote_state" "aws_security_group" {
-  backend = "remote"
-
-  config = {
-    organization = "rogercorp"
-    workspaces = {
-      name = "aws-security-group-prod"
-    }
-  }
-}
-
 module "aws_instance" {
   source  = "app.terraform.io/rogercorp/aws-instance-PMR/tfe"
   version = "1.2.0"
