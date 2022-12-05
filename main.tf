@@ -40,6 +40,6 @@ module "aws_instance" {
   ttl = "3"
   key_name = data.aws_key_pair.example.key_name
 
-  vpc_security_group_ids  = [data.terraform_remote_state.aws_security_group.outputs.security_group_id]
+  security_group_id       = [data.terraform_remote_state.aws_security_group.outputs.security_group_id]
   subnet_id               = data.terraform_remote_state.aws_vpc_prod.outputs.public_subnets[0]
 }
