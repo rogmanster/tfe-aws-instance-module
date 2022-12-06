@@ -42,5 +42,5 @@ module "aws_instance" {
 
   security_group_id       = [data.terraform_remote_state.aws_security_group.outputs.security_group_id]
   subnet_id               = data.terraform_remote_state.aws_vpc_prod.outputs.public_subnets[0]
-  description             = "v0.1.3 more updates"
+  description             = "v0.1.4"
 }
