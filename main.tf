@@ -31,7 +31,7 @@ data "aws_key_pair" "example" {
 
 module "aws_instance" {
   source  = "app.terraform.io/rogercorp/aws-instance-PMR/tfe"
-  version = "1.2.4"
+  version = "~> 1.2.3"
 
   name   = "rchao-test"
   instance_count = "1"
